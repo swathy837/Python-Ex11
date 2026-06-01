@@ -1,0 +1,20 @@
+import math
+import numpy as np
+import matplotlib.pyplot as plt
+x = np.linspace(0, 10, 100)
+exp_values = np.exp(x) 
+log_values = np.log(x + 1)
+sin_values = np.sin(x)       
+angle = math.radians(45)
+print("sin(45°) using math module =", math.sin(angle))
+print("log(10) using math module =", math.log(10))
+print("2^5 using math module =", math.pow(2, 5))
+plt.plot(x, exp_values, label='exp(x)')
+plt.plot(x, log_values, label='log(x+1)')
+plt.plot(x, sin_values, label='sin(x)')
+plt.xlabel("x values")
+plt.ylabel("Function values")
+plt.title("Mathematical Functions using NumPy and Math Module")
+plt.legend()
+plt.grid(True)
+plt.show()
