@@ -1,0 +1,15 @@
+import numpy as np
+import matplotlib.pyplot as plt
+data = np.random.normal(loc=50, scale=10, size=1000)
+mean_value = np.mean(data)
+median_value = np.median(data)
+std_deviation = np.std(data)
+print("Mean =", mean_value)
+print("Median =", median_value)
+print("Standard Deviation =", std_deviation)
+plt.hist(data, bins=30)
+plt.xlabel("Values")
+plt.ylabel("Frequency")
+plt.title("Histogram of Normal Distribution")
+plt.grid(True)
+plt.show()
